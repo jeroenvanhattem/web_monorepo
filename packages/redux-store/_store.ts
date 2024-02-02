@@ -26,19 +26,17 @@ const saveState = (state: any) => {
 
 const persistedState = loadState();
 
-const store = configureStore({
+const exportStore = configureStore({
 	reducer: {
 		auth: authSlice.reducer,
 	},
 	preloadedState: persistedState,
 });
 
-store.subscribe(() => {
+export const store = exportStore.subscribe(() => {
 	saveState({
-		auth: store.getState().auth,
+		auth: exportStore.getState().auth,
 	});
 });
 
 export const authActions = authSlice.actions;
-
-export { store };
