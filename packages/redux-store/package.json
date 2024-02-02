@@ -1,24 +1,40 @@
 {
-	"name": "redux-store",
-	"version": "0.0.0",
-	"main": "./index.tsx",
-	"types": "./index.tsx",
-	"license": "MIT",
-	"scripts": {
-		"lint": "eslint .",
-		"generate:component": "turbo gen react-component"
-	},
-	"devDependencies": {
-		"@turbo/gen": "^1.10.12",
-		"@types/node": "^20.10.6",
-		"@types/react": "^18.2.46",
-		"@types/react-dom": "^18.2.18",
-		"eslint-config-custom": "workspace:*",
-		"tsconfig": "workspace:*",
-		"typescript": "^4.5.2"
-	},
-	"dependencies": {
-		"@reduxjs/toolkit": "^1.9.5",
-		"react": "^18.2.0"
-	}
+  "name": "redux-store",
+  "version": "0.0.0",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "types": "./index.tsx",
+      "default": "./index.tsx"
+    },
+    "./actions": {
+      "types": "./actions.ts",
+      "default": "./actions.ts"
+    },
+    "./reducers": {
+      "types": "./reducers/index.ts",
+      "default": "./reducers/index.ts"
+    },
+    "./store": {
+      "types": "./store.ts",
+      "default": "./store.ts"
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "generate:component": "turbo gen react-component"
+  },
+  "devDependencies": {
+    "@turbo/gen": "^1.10.12",
+    "@types/node": "^20.10.6",
+    "@types/react": "^18.2.46",
+    "@types/react-dom": "^18.2.18",
+    "eslint-config-custom": "workspace:*",
+    "tsconfig": "workspace:*",
+    "typescript": "^4.5.2"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.9.5",
+    "react": "^18.2.0"
+  }
 }

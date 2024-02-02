@@ -10,21 +10,21 @@ import { authSlice } from "redux-store/reducers";
 const openSans = Open_Sans({ subsets: ["latin"] });
 
 export default function RootLayout({
-	children,
+  children,
 }: {
-	children: React.JSX.Element;
+  children: React.JSX.Element;
 }) {
-	useEffect(() => {
-		const reduxState = getReduxStateFromLocalstorage();
-		if (reduxState) {
-			store.dispatch(authSlice.actions.hydrate(reduxState.auth));
-		}
-	}, []);
-	return (
-		<html lang="en">
-			<Providers>
-				<body className={openSans.className}>{children}</body>
-			</Providers>
-		</html>
-	);
+  useEffect(() => {
+    const reduxState = getReduxStateFromLocalstorage();
+    if (reduxState) {
+      store.dispatch(authSlice.actions.hydrate(reduxState.auth));
+    }
+  }, []);
+  return (
+    <html lang="en">
+      <Providers>
+        <body className={openSans.className}>{children}</body>
+      </Providers>
+    </html>
+  );
 }
