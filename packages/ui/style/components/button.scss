@@ -1,0 +1,69 @@
+.button--primary {
+	display: flex;
+	background-color: blue;
+	border-color: blue;
+	width: 288px;
+	height: 50px;
+	border-radius: 8px;
+	color: black;
+	font-size: 16px;
+	margin: 16px 0px;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid blue;
+
+	&:hover {
+		background-color: blue;
+		border-color: blue;
+		cursor: pointer;
+	}
+}
+
+.button--small {
+	width: 144;
+	height: 60;
+}
+.button--medium {
+	width: 216;
+	height: 60;
+}
+.button--large {
+	width: 288;
+	height: 60;
+}
+.button--narrow {
+	width: 80;
+	height: 48;
+	border-radius: 8;
+}
+.button--compact {
+	width: 144;
+	height: 48;
+	border-radius: 8;
+}
+.button--wide {
+	width: 288;
+	height: 48;
+	border-radius: 8;
+}
+.button--secondary {
+	background-color: purple;
+	border-color: purple;
+}
+.button--tertiary {
+	background-color: pink;
+	border-color: pink;
+}
+.button--inverted {
+	background-color: transparent !important;
+	color: white;
+}
+.button--disabled {
+	background-color: grey !important;
+	color: white;
+}
+
+.button-container {
+	margin-top: 16px;
+}

@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./components/button.scss";
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Open Sans", sans-serif;
+	font-size: 16px;
+	background-color: #000000;
+	color: #fff;
+}
+
+main,
+section {
+	z-index: 2;
+}
