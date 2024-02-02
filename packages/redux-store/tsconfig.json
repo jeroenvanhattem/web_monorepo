@@ -6,11 +6,11 @@
     "paths": {
       "@redux-store/*": ["src/*"]
     },
-    "module": "commonjs",
+    "module": "ESNext",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
-    "isolatedModules": true,
+    "isolatedModules": true
   },
   "exclude": ["dist", "build", "node_modules"]
 }
