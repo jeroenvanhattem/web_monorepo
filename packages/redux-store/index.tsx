@@ -1,5 +1,5 @@
 import * as actions from "./actions";
 import * as reducers from "./reducers";
-import * as Store from "./store";
+import * as store from "./store";
 
-export { actions, reducers, Store };
+export { actions, reducers, store };

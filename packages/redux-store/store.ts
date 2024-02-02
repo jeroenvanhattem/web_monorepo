@@ -33,10 +33,12 @@ const exportStore = configureStore({
 	preloadedState: persistedState,
 });
 
-export const store = exportStore.subscribe(() => {
+exportStore.subscribe(() => {
 	saveState({
 		auth: exportStore.getState().auth,
 	});
 });
 
 export const authActions = authSlice.actions;
+
+export { exportStore as store };
